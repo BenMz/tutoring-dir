@@ -1,14 +1,15 @@
 const mongoose = require('mongoose')
-const  config = require('config')
+const config = require('config')
 const db = config.get('mongoURI')
 
-const connectDB = async() => {
-  try{
+const connectDB = async () => {
+  try {
     await mongoose.connect(db, {
-      useNewUrlParser: true
+      useNewUrlParser: true,
+      useCreateIndex: true
     })
     console.log('connected')
-  } catch(err) {
+  } catch (err) {
     console.log(err.message)
     //exit with failure
     process.exit(1)
