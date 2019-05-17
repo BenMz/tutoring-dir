@@ -6,8 +6,8 @@ const {
 } = require('express-validator/check');
 const auth = require('../../middleware/auth');
 
-const Profile = require('../../models/Profile')
-const User = require('../../models/User')
+const Profile = require('../../models/Profile');
+const User = require('../../models/User');
 // @route   GET api/profile/me
 // @desc    Get user profile
 // @access  Private
